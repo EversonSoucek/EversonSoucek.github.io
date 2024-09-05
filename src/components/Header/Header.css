@@ -1,0 +1,21 @@
+.header {
+    background-color: #151515;
+}
+
+.header__list {
+    list-style-type: none;
+    
+}
+
+.header__list a {
+    text-decoration: none;
+    color: #ffff;
+    font-size: var(--26px);
+    font-family: "Poppins", sans-serif;
+}
+
+.header__icon {
+    color: #8331EB;
+    width: var(--40px);
+    height: var(--40px);
+}
