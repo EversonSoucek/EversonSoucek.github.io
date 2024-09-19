@@ -1,15 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
 :root {
-	--24px: 1.50rem
+	--24px: 1.50rem;
 	--26px: 1.63rem;
-	--30px: 1.88rem
-	--32px: 2rem
-	--40px: 2.5rem
-	--48px: 3rem
+	--30px: 1.88rem;
+	--32px: 2rem;
+	--40px: 2.5rem;
+	--48px: 3rem;
 	--52px: 3.25rem;
-	--64px: 4rem
-
+	--64px: 4rem;
 }
 
 html, body, div, span, applet, object, iframe,

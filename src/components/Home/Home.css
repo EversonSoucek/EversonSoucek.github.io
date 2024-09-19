@@ -1,5 +1,78 @@
-.Home {
-    height: 800px;
-    width: 100px;
-    background-image: url("../../assets/img/Tunnel1.png");
+.grid {
+    background-color: transparent;
+    height: 80vh; /* Ajuste a altura conforme necessário */
+    position: relative;
+    z-index: 0;
+    display: flex;
+    justify-content: flex-start; /* Alinha o conteúdo à esquerda */
+    align-items: center;
+    margin: 0;
+    margin-left: 200px;
+    padding-left: 100px; /* Adiciona um espaçamento da borda esquerda */
+}
+
+.Home__content {
+    text-align: left;
+    color: #FFFFFF;
+    max-width: 700px;
+    margin: 0; /* Remove a centralização */
+}
+
+.Home__Nome {
+    font-size: 3.5rem;
+    font-weight: 300;
+    margin-bottom: 10px;
+    color: #FFFFFF;
+}
+
+.highlight {
+    color: #8331EB;
+    font-weight: bold;
+}
+
+.Home-subtitle {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 5px 0 15px 0;
+    color: #FFFFFF;
+}
+
+.Home__description {
+    font-size: 1rem;
+    margin: 10px 0;
+    line-height: 1.4;
+    color: #cccccc;
+}
+
+.Home__buttons {
+    margin-top: 15px;
+}
+
+.Home__button {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    margin: 0 5px;
+    transition: background 0.3s ease;
+}
+
+.Home__button--primary {
+    background-color: #8331EB;
+    color: white;
+}
+
+.Home__button--primary:hover {
+    background-color: #6a25ba;
+}
+
+.Home__button--secondary {
+    background-color: transparent;
+    color: #FFFFFF;
+    border: 2px solid #FFFFFF;
+}
+
+.Home__button--secondary:hover {
+    background-color: rgba(255, 255, 255, 0.1);
 }
