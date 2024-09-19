@@ -1,28 +1,39 @@
-.grid {
+.Home {
     background-color: transparent;
-    height: 80vh; /* Ajuste a altura conforme necessário */
+    height: 80vh;
     position: relative;
     z-index: 0;
     display: flex;
-    justify-content: flex-start; /* Alinha o conteúdo à esquerda */
+    justify-content: flex-start;
     align-items: center;
     margin: 0;
     margin-left: 200px;
-    padding-left: 100px; /* Adiciona um espaçamento da borda esquerda */
+    padding-left: 100px;
 }
 
-.Home__content {
+.Home__conteudo {
     text-align: left;
     color: #FFFFFF;
     max-width: 700px;
-    margin: 0; /* Remove a centralização */
+    margin: 0;
 }
 
 .Home__Nome {
+    font-family: "Poppins", sans-serif;
     font-size: 3.5rem;
     font-weight: 300;
     margin-bottom: 10px;
     color: #FFFFFF;
+    background: linear-gradient(90deg,
+            #8331EB 100px,
+            #C8B0E7 200px,
+            #8331EB 300px,
+            #C8B0E7 400px,
+            #8331EB 500px);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
 }
 
 .highlight {
@@ -30,15 +41,17 @@
     font-weight: bold;
 }
 
-.Home-subtitle {
-    font-size: 2rem;
+.Home__subtitulo {
+    font-family: "Poppins", sans-serif;
+    font-size: var(--48px);
     font-weight: bold;
     margin: 5px 0 15px 0;
     color: #FFFFFF;
 }
 
-.Home__description {
-    font-size: 1rem;
+.Home__descricao {
+    font-family: "Poppins", sans-serif;
+    font-size: var(--32px);
     margin: 10px 0;
     line-height: 1.4;
     color: #cccccc;
@@ -49,9 +62,10 @@
 }
 
 .Home__button {
-    font-size: 0.9rem;
+    font-family: "Poppins", sans-serif;
+    font-size: var(--20px);
     padding: 8px 16px;
-    border-radius: 25px;
+    border-radius: 12px;
     border: none;
     cursor: pointer;
     margin: 0 5px;
@@ -61,18 +75,23 @@
 .Home__button--primary {
     background-color: #8331EB;
     color: white;
+    box-shadow: 0 0 20px rgba(131, 49, 235, 0.7);
+    transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 
 .Home__button--primary:hover {
     background-color: #6a25ba;
+    box-shadow: 0 0 25px rgba(131, 49, 235, 1);
 }
+
 
 .Home__button--secondary {
     background-color: transparent;
     color: #FFFFFF;
-    border: 2px solid #FFFFFF;
+    border: 2px solid #8331EB;
 }
 
 .Home__button--secondary:hover {
     background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 1);
 }

@@ -3,14 +3,16 @@ import "./Home.css";
 
 const Home = () => {
   return (
-    <div className="grid">
-      <div className='Home__content'>
+    <div className="Home">
+      <div className='Home__conteudo'>
         <h1 className='Home__Nome'>I'm Everson Soucek</h1>
-        <h2 className='Home-subtitle'>Front-End</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores commodi tenetur quidem 
+        <h2 className='Home__subtitulo'>Front-End</h2>
+        <p className="Home__descricao">
+          Engenheiro de Software focado em desenvolvimento web, com experiência em React e C#. 
         </p>
-        
+        <button className="Home__button Home__button--primary">Mais sobre Mim</button>
+        <button className="Home__button Home__button--secondary">Me contate</button>
+
       </div>
     </div>
   );
