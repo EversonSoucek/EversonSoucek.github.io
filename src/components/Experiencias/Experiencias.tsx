@@ -1,4 +1,3 @@
-import React from 'react'
 import './Experiencias.css'
 import visual from "../../assets/img/VisualSoftwareLogo.png"
 

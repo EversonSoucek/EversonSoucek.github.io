@@ -1,4 +1,3 @@
-import React from 'react';
 import logo from "../../assets/img/ES Logo.png";
 import "./Header.css";
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
