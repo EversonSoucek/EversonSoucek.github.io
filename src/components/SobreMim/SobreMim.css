@@ -54,12 +54,41 @@
     text-align: justify;
 }
 
+/* Estilos para dispositivos menores */
 @media (max-width: 768px) {
+    .sobreMim {
+        padding: 30px;
+        height: auto; /* Permite que o conteúdo se expanda conforme necessário */
+    }
+
     .sobreMim__Titulo {
-        font-size: 2rem;
+        font-size: 2.5rem; /* Ajusta o tamanho do título para telas menores */
+        margin-bottom: 30px;
     }
 
     .sobreMim__secao-titulo {
-        font-size: 1.5rem;
+        font-size: 1.8rem; /* Diminui o tamanho dos títulos das seções */
+    }
+
+    .sobreMim__secao-texto {
+        font-size: 1.2rem; /* Reduz o tamanho do texto para telas menores */
+    }
+}
+
+@media (max-width: 480px) {
+    .sobreMim {
+        padding: 20px;
+    }
+
+    .sobreMim__Titulo {
+        font-size: 2rem; /* Ajusta ainda mais o tamanho do título para dispositivos muito pequenos */
+    }
+
+    .sobreMim__secao-titulo {
+        font-size: 1.5rem; /* Ajusta o título da seção para dispositivos muito pequenos */
+    }
+
+    .sobreMim__secao-texto {
+        font-size: 1rem; /* Reduz o tamanho do texto para dispositivos pequenos */
     }
 }

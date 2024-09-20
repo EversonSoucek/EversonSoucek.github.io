@@ -42,7 +42,7 @@
 }
 
 .Home__subtitulo {
-    font-family: "Poppins",sans-serif;
+    font-family: "Poppins", sans-serif;
     font-size: var(--48px);
     font-weight: bold;
     margin: 5px 0 15px 0;
@@ -50,7 +50,7 @@
 }
 
 .Home__descricao {
-    font-family: "Poppins",sans-serif;
+    font-family: "Poppins", sans-serif;
     font-size: var(--32px);
     margin: 10px 0;
     line-height: 1.4;
@@ -62,7 +62,7 @@
 }
 
 .Home__button {
-    font-family: "Poppins",sans-serif;
+    font-family: "Poppins", sans-serif;
     font-size: var(--20px);
     padding: 8px 16px;
     border-radius: 12px;
@@ -84,7 +84,6 @@
     box-shadow: 0 0 25px rgba(131, 49, 235, 1); /* Aumenta o brilho ao passar o mouse */
 }
 
-
 .Home__button--secondary {
     background-color: transparent;
     color: #FFFFFF;
@@ -94,4 +93,38 @@
 .Home__button--secondary:hover {
     background-color: rgba(255, 255, 255, 0.1);
     box-shadow: 0 0 15px rgba(255, 255, 255, 1); /* Aumenta o brilho ao passar o mouse */
+}
+
+/* Regras para telas menores (responsividade) */
+@media (max-width: 768px) {
+    .Home {
+        margin-left: 0;
+        padding-left: 20px; /* Reduz o padding para dispositivos móveis */
+        justify-content: center; /* Centraliza o conteúdo no mobile */
+        align-items: center;
+        height: 100vh; /* Ajusta a altura para ocupar a tela inteira */
+    }
+
+    .Home__conteudo {
+        text-align: center; /* Centraliza o texto */
+        padding: 0 10px; /* Adiciona padding lateral para evitar cortes de texto */
+    }
+
+    .Home__Nome {
+        font-size: 2.5rem; /* Diminui o tamanho do título no mobile */
+    }
+
+    .Home__subtitulo {
+        font-size: 1.8rem; /* Ajusta o subtítulo */
+    }
+
+    .Home__descricao {
+        font-size: 1rem; /* Diminui o tamanho da descrição */
+        line-height: 1.2;
+    }
+
+    .Home__button {
+        font-size: 1rem; /* Ajusta o tamanho dos botões */
+        padding: 10px 20px;
+    }
 }
