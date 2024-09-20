@@ -1,23 +1,45 @@
 .sobreMim {
+    height: 100vh;
     background-color: #151515;
     color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     padding: 50px;
+    box-sizing: border-box;
 }
 
 .sobreMim__Titulo {
-    font-size: 2.5rem;
+    font-size: var(--52px);
     font-family: "Poppins", sans-serif;
+    font-weight: bold;
     text-align: center;
     color: #8331EB;
     margin-bottom: 40px;
+    background: linear-gradient(90deg,
+            #8331EB 100px,
+            #C8B0E7 200px,
+            #8331EB 300px,
+            #C8B0E7 400px,
+            #8331EB 500px);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
 }
 
-.sobreMin__secao {
+.sobreMim__conteudo {
+    max-width: 768px;
+    width: 100%;
+}
+
+.sobreMim__secao {
     margin-bottom: 40px;
 }
 
 .sobreMim__secao-titulo {
-    font-size: var(--48px);
+    font-size: var(--40px);
     font-family: "Poppins", sans-serif;
     font-weight: bold;
     color: #FFFFFF;
@@ -25,9 +47,19 @@
 }
 
 .sobreMim__secao-texto {
-    font-size: 1rem;
+    font-size: var(--30px);
     font-family: "Poppins", sans-serif;
     color: #CCCCCC;
     line-height: 1.6;
     text-align: justify;
+}
+
+@media (max-width: 768px) {
+    .sobreMim__Titulo {
+        font-size: 2rem;
+    }
+
+    .sobreMim__secao-titulo {
+        font-size: 1.5rem;
+    }
 }

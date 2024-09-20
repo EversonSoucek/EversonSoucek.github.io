@@ -1,11 +1,11 @@
 .header {
     background-color: transparent;
-    height: auto; /* Altura determinada pelo conteúdo */
-    min-height: 20vh; /* Reduz ainda mais a altura mínima */
-    position: relative;
+    height: auto; 
+    min-height: 20vh; 
+    position: fixed;
     z-index: 1;
     color: #FFFFFF;
-    padding: 5px 0; /* Reduz o padding para 5px */
+    padding: 5px 0; 
 }
 
 

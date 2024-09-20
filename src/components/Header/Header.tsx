@@ -10,11 +10,11 @@ export default function Header() {
         <ul className='header__list'>
           <li><img src={logo} alt='Logo que parece ter a semelhança da letra E e A' className="header__logo" /></li>
           <li><a href="#home" className='header__list-link'>Home</a></li>
-          <li><a href="#about" className='header__list-link'>About</a></li>
-          <li><a href="#skills" className='header__list-link'>Skills</a></li>
-          <li><a href="#experiences" className='header__list-link'>Experiences</a></li>
-          <li><a href="#projects" className='header__list-link'>Projects</a></li>
-          <li><a href="#contact" className='header__list-link'>Contact</a></li>
+          <li><a href="#sobre" className='header__list-link'>Sobre Mim</a></li>
+          {/*<li><a href="#skills" className='header__list-link'>Skills</a></li>*/}
+          <li><a href="#experiencias" className='header__list-link'>Experiencias</a></li>
+          {/*<li><a href="#projects" className='header__list-link'>Projects</a></li>
+          <li><a href="#contact" className='header__list-link'>Contact</a></li>*/}
         </ul>
         <div className='header__social'>
           <a href="https://github.com" target="_blank" rel="noopener noreferrer" className='header__social-icon'>
