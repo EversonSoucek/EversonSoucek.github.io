@@ -31,4 +31,4 @@ Você pode acessar o projeto de duas formas:
 
 :pencil: Autor
 
-<img src='https://avatars.githubusercontent.com/u/SEU_ID_GITHUB?v=4' width=115><br> Everson Soucek
+<img src='https://avatars.githubusercontent.com/u/105561519?v=4' width=115><br> Everson Soucek
