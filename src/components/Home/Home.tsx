@@ -5,7 +5,7 @@ const Home = () => {
     <div className="Home" id="home">
       <div className='Home__conteudo'>
         <h1 className='Home__Nome'>I'm Everson Soucek</h1>
-        <h2 className='Home__subtitulo'>Front-End</h2>
+        <h2 className='Home__subtitulo'>Front-end</h2>
         <p className="Home__descricao">
           Engenheiro de Software focado em desenvolvimento web, com experiência em React e C#. 
         </p>
