@@ -1,3 +1,4 @@
+/* Mantém o CSS do desktop igual */
 .header {
     background-color: transparent;
     height: auto; 
@@ -9,8 +10,6 @@
     transition: background-color 0.3s ease;
     width: 100%;
 }
-
-
 
 .header__nav {
     display: flex;
@@ -26,7 +25,7 @@
 .header__list-link {
     text-decoration: none;
     color: #FFFFFF;
-    font-family: "Poppins",sans-serif;
+    font-family: "Poppins", sans-serif;
     font-size: var(--26px);
     margin-left: 60px;
 }
@@ -37,4 +36,42 @@
 
 .header__social-icon {
     margin-left: 15px;
+}
+
+/* Regras adicionadas para mobile */
+@media (max-width: 768px) {
+    .header {
+        position: relative; /* Remove a fixação no mobile */
+        display: flex;
+        width: 100%; /* Certifica-se de que ocupa toda a largura */
+    }
+
+    .header__nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header__list {
+        flex-direction: column;
+        margin-left: 0;
+        padding: 10px 0;
+    }
+
+    .header__list-link {
+        font-size: 18px;
+        margin: 10px 0;
+    }
+
+    .header__social {
+        margin-left: 0;
+        margin-top: 15px;
+    }
+
+    .header__icon {
+        size: 30px; /* Ajuste no tamanho dos ícones para mobile */
+    }
+
+    .header__logo {
+        width: 50px; /* Diminui o tamanho do logo no mobile */
+    }
 }
