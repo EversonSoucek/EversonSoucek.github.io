@@ -61,40 +61,6 @@
     margin-top: 15px;
 }
 
-.Home__button {
-    font-family: "Poppins", sans-serif;
-    font-size: var(--20px);
-    padding: 8px 16px;
-    border-radius: 12px;
-    border: none;
-    cursor: pointer;
-    margin: 0 5px;
-    transition: background 0.3s ease;
-}
-
-.Home__button--primary {
-    background-color: #8331EB;
-    color: white;
-    box-shadow: 0 0 20px rgba(131, 49, 235, 0.7); 
-    transition: background 0.3s ease, box-shadow 0.3s ease;
-}
-
-.Home__button--primary:hover {
-    background-color: #6a25ba;
-    box-shadow: 0 0 25px rgba(131, 49, 235, 1); 
-}
-
-.Home__button--secondary {
-    background-color: transparent;
-    color: #FFFFFF;
-    border: 2px solid #8331EB;
-}
-
-.Home__button--secondary:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-    box-shadow: 0 0 15px rgba(255, 255, 255, 1); 
-}
-
 /* Regras para telas menores (responsividade) */
 @media (max-width: 768px) {
     .Home {

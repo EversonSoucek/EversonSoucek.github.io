@@ -4,6 +4,7 @@ import SlideAnimation from "../Animations/SlideAnimation/SlideAnimation";
 import FadeBottomAnimation from "../Animations/FadeBottomAnimation/FadeBottomAnimation";
 import FadeLeftAnimation from "../Animations/FadeLeftAnimation/FadeLeftAnimation";
 import "./Home.css";
+import Button from "../Button/Button";
 
 const Home = () => {
   const ref = useRef(null);
@@ -25,10 +26,11 @@ const Home = () => {
             em React e C#.
           </p>
         </FadeLeftAnimation>
+
         <FadeBottomAnimation isInView={isInView}>
           <div>
-            <button className="Home__button Home__button--primary">Mais sobre Mim</button>
-            <button className="Home__button Home__button--secondary">Me contate</button>
+            <Button className="button--primary">Mais sobre mim</Button>
+            <Button className=" button--secondary">Me contate</Button>
           </div>
         </FadeBottomAnimation>
       </div>

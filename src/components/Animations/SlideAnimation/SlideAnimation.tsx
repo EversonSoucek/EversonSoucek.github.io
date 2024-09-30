@@ -7,6 +7,8 @@ const SlideAnimation = ({ isInView, duration = 0.75, children }) => {
   useEffect(() => {
     if (isInView) {
       slideControls.start("visible");
+    } else {
+      slideControls.start("hidden"); // Para reiniciar a animação quando sai de vista
     }
   }, [isInView, slideControls]);
 
