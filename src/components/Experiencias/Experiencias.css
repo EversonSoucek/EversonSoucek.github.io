@@ -25,6 +25,8 @@
     margin-bottom: 40px;
     text-align: center;
     animation: gradient 5s linear infinite;
+    text-align: center;
+
 }
 
 @keyframes gradient {

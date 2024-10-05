@@ -4,26 +4,28 @@ import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import "./Header.css";
 
 export default function Header() {
-  const [opacity, setOpacity] = useState(0); // Começa com opacidade baixa (transparente)
+  const [opacidade, setOpacidade] = useState(0);
 
+
+  // Calcula a opacidade com base na posição de scroll da página:
+  // - posicaoScroll / 1000: Aumenta a opacidade gradualmente conforme o scroll (0 a 1).
+  // - Math.min(1, ...): Garante que a opacidade não ultrapasse 1, mesmo com scroll maior que 1000.
   useEffect(() => {
-    const handleScroll = () => {
-      const scrollPosition = window.scrollY;
-      // O header começa transparente e vai ficando opaco
-      const newOpacity = Math.min(1, scrollPosition / 1100); 
-      setOpacity(newOpacity); // Atualiza a opacidade com base no scroll
+    const controlaOpacidadeAoScrollar = () => {
+      const posicaoScroll = window.scrollY;
+      const novaOpacidade = Math.min(1, posicaoScroll / 1000);
+      setOpacidade(novaOpacidade);
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', controlaOpacidadeAoScrollar);
 
-    // Remove o event listener ao desmontar o componente
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('scroll', controlaOpacidadeAoScrollar);
     };
   }, []);
 
   return (
-    <header className='header' style={{ backgroundColor: `rgba(21, 21, 21, ${opacity})` }}>
+    <header className='header' style={{ backgroundColor: `rgba(21, 21, 21, ${opacidade})` }}>
       <nav className='header__nav'>
         <ul className='header__list'>
           <li>
@@ -38,10 +40,10 @@ export default function Header() {
         </ul>
         <div className='header__social'>
           <a href="https://github.com/EversonSoucek" target="_blank" rel="noopener noreferrer" className='header__social-icon'>
-            <FaGithub className="header__icon" size={40} color='#8331EB' />
+            <FaGithub className="header__icon" size={40} color='#8331EB' alt="Logo do github" />
           </a>
           <a href="https://www.linkedin.com/in/everson-soucek-152984232/" target="_blank" rel="noopener noreferrer" className='header__social-icon'>
-            <FaLinkedin className="header__icon" size={40} color='#8331EB' />
+            <FaLinkedin className="header__icon" size={40} color='#8331EB' alt="Logo do linkedin" />
           </a>
         </div>
       </nav>

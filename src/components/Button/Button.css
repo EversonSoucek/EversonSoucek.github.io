@@ -9,18 +9,55 @@
     transition: background 0.3s ease;
     text-decoration: none;
     display: inline-block;
+    position: relative;
+}
+
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false ;
+}
+
+.button--primary::after,
+.button--primary::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: conic-gradient(from var(--angle),transparent 80%, #8331EB, white,#8331EB);
+    padding: 2px;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    border-radius: 8px;
+    animation: 3s spin linear infinite;
+}
+
+@keyframes  spin {
+    from{
+        --angle: 0deg
+    }
+    to {
+        --angle:360deg
+    }
+}
+
+.button--primary::before {
+    filter: blur(1.5rem);
+    opacity: 0.5;
 }
 
 .button--primary {
     background-color: #8331EB;
     color: white;
-    box-shadow: 0 0 20px rgba(131, 49, 235, 0.7); 
+    box-shadow: 0 0 20px rgba(131, 49, 235, 0.7);
     transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 
 .button--primary:hover {
     background-color: #6a25ba;
-    box-shadow: 0 0 25px rgba(131, 49, 235, 1); 
+    box-shadow: 0 0 25px rgba(131, 49, 235, 1);
 }
 
 .button--secondary {
@@ -31,5 +68,5 @@
 
 .button--secondary:hover {
     background-color: rgba(255, 255, 255, 0.1);
-    box-shadow: 0 0 15px rgba(255, 255, 255, 1); 
+    box-shadow: 0 0 15px rgba(255, 255, 255, 1);
 }

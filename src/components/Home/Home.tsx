@@ -13,8 +13,8 @@ const Home = () => {
   return (
     <div className="Home" id="home">
       <div ref={ref} className="Home__conteudo">
-        <SlideAnimation isInView={isInView}>
-          <FadeBottomAnimation isInView={isInView}>
+        <SlideAnimation isInView={isInView} duration={1}>
+          <FadeBottomAnimation isInView={isInView} duration={1}>
             <h1 className="Home__Nome">I'm Everson Soucek</h1>
           </FadeBottomAnimation>
         </SlideAnimation>

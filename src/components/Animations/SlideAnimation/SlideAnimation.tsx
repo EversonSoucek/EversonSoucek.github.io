@@ -13,7 +13,7 @@ const SlideAnimation = ({ isInView, duration = 0.75, children }) => {
   }, [isInView, slideControls]);
 
   return (
-    <div style={{ position: "relative", display: "inline-block", overflow: "hidden" }}>
+    <div style={{ position: "relative", display: "inline-block", width: "fit-content",overflow: "hidden" }}>
       <motion.div
         variants={{
           hidden: { left: 0 },

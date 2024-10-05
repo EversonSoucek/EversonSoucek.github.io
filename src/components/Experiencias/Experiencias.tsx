@@ -7,16 +7,17 @@ import { useInView } from 'framer-motion';
 
 export default function Experiencias() {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
+  const isInView = useInView(ref, { once: true, amount: 0.25 });
 
   return (
     <div className="experiencias" id='experiencias' ref={ref}>
-      <SlideAnimation isInView={isInView}>
-        <FadeBottomAnimation isInView={isInView}>
-          <h1 className="experiencias__titulo">Experiências</h1>
-        </FadeBottomAnimation>
-      </SlideAnimation>
-
+      <div style={{ textAlign: 'center' }}>
+        <SlideAnimation duration={1} isInView={isInView}>
+          <FadeBottomAnimation isInView={isInView} duration={1}>
+            <h1 className="experiencias__titulo">Experiências</h1>
+          </FadeBottomAnimation>
+        </SlideAnimation>
+      </div>
       <div className="experiencias__lista">
         <div className="experiencias__item">
           <div className="experiencias__logo">
@@ -33,5 +34,6 @@ export default function Experiencias() {
         </div>
       </div>
     </div>
-  )
+  );
+
 }
