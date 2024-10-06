@@ -5,6 +5,7 @@ import './SobreMim.css';
 import { useInView } from 'framer-motion';
 import FadeBottomAnimation from '../Animations/FadeBottomAnimation/FadeBottomAnimation';
 import FadeLeftAnimation from '../Animations/FadeLeftAnimation/FadeLeftAnimation';
+import Titulo from '../Titulo/Titulo';
 
 export default function SobreMim() {
   const ref = useRef(null);
@@ -14,7 +15,7 @@ export default function SobreMim() {
     <div className="sobreMim" id='sobre' ref={ref}>
       <SlideAnimation isInView={isInView} duration={1}>
         <FadeBottomAnimation isInView={isInView} duration={1}>
-          <h1 className="sobreMim__Titulo">Sobre Mim</h1>
+          <Titulo>Sobre Mim</Titulo>
         </FadeBottomAnimation>
       </SlideAnimation>
       <FadeLeftAnimation isInView={isInView}>
