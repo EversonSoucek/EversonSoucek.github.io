@@ -1,3 +1,4 @@
+/* MainPage.css */
 .main-container {
     background-color: #151515;
     background-image: url('../assets/img/Tunnel.png');
@@ -8,14 +9,16 @@
     flex-direction: column;
     margin: 0;
     padding: 0;
+    position: relative;
+    z-index: 0;
 }
 
 /* Regras para telas menores */
 @media (max-width: 768px) {
     .main-container {
-        padding: 0 20px; /* Adiciona padding lateral para evitar que o conteúdo encoste nas bordas */
-        background-position: center; /* Garante que a imagem de fundo permaneça centralizada */
-        background-size: cover; /* Mantém a imagem no tamanho correto */
+        padding: 0 20px;
+        background-position: center;
+        background-size: cover;
         min-height: 100vh;
     }
 }

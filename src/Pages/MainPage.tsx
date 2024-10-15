@@ -3,6 +3,7 @@ import Home from '../components/Home/Home';
 import './MainPage.css';
 import SobreMim from '../components/SobreMim/SobreMim';
 import Experiencias from '../components/Experiencias/Experiencias';
+import Skills from '../components/Skills/Skills';
 
 export default function MainPage() {
   return (
@@ -12,6 +13,7 @@ export default function MainPage() {
         <Home />
       </div>
       <SobreMim />
+      <Skills/>
       <Experiencias/>
     </>
 
