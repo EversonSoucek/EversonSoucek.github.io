@@ -10,21 +10,21 @@ import Titulo from '../Titulo/Titulo'
 
 export default function Experiencias() {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, amount: 0.25 });
+  const isInView = useInView(ref, { once: true, amount: 0.1 });
 
   const experiencias = [{
     empresa: "Visual software",
     data: "Julho 2023 - Atual",
     cargo: "Analista de Qualidade",
     descricao: "Atuando como analista de QA em um ERP de gestão empresarial, envolvido na realização de testes exploratórios criação de casos de testes e documentação de novas funcionalidades do software.",
-    imagem:visual
+    imagem: visual
   },
   {
     empresa: "Siemens Gamesa",
     data: "Junho 2024",
     cargo: "Desenvolvedor Front-end | Freelancer",
     descricao: "Desenvolvi um sistema para automatizar a geração de contratos no setor de vendas. Para mais detalhes, consulte a seção de projetos.",
-    imagem:siemens
+    imagem: siemens
   }
   ]
 
@@ -37,23 +37,28 @@ export default function Experiencias() {
           </FadeBottomAnimation>
         </SlideAnimation>
       </div>
+
       {experiencias.map((experiencia) => (
-        <div className="experiencias__lista">
-          <div className="experiencias__item">
-            <div className="experiencias__logo">
-              <img src={experiencia.imagem} alt="Logo da Visual Software" className="experiencias__logo-imagem" />
-            </div>
-            <div className="experiencias__conteudo">
-              <h2 className="experiencias__empresa">{experiencia.empresa}</h2>
-              <p className="experiencias__data">{experiencia.data}</p>
-              <h3 className="experiencias__cargo">{experiencia.cargo}</h3>
-              <p className="experiencias__descricao">
-                {experiencia.descricao}
-              </p>
+        <FadeBottomAnimation isInView={isInView}>
+          <div className="experiencias__lista">
+            <div className="experiencias__item">
+              <div className="experiencias__logo">
+                <img src={experiencia.imagem} alt="Logo da Visual Software" className="experiencias__logo-imagem" />
+              </div>
+              <div className="experiencias__conteudo">
+                <h2 className="experiencias__empresa">{experiencia.empresa}</h2>
+                <p className="experiencias__data">{experiencia.data}</p>
+                <h3 className="experiencias__cargo">{experiencia.cargo}</h3>
+                <p className="experiencias__descricao">
+                  {experiencia.descricao}
+                </p>
+              </div>
             </div>
           </div>
-        </div>
+        </FadeBottomAnimation>
       ))}
+
+
     </div>
   );
 
