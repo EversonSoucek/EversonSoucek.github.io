@@ -14,7 +14,7 @@ export default function Experiencias() {
 
   const experiencias = [{
     empresa: "Visual software",
-    data: "Agosto 2023 - Atual",
+    data: "Julho 2023 - Atual",
     cargo: "Analista de Qualidade",
     descricao: "Atuando como analista de QA em um ERP de gestão empresarial, envolvido na realização de testes exploratórios criação de casos de testes e documentação de novas funcionalidades do software.",
     imagem:visual
