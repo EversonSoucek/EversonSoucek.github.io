@@ -16,23 +16,26 @@ export default function Projetos() {
     return (
         <div className='Projetos'>
             <Titulo>Projetos</Titulo>
-            {projetos.map((projeto) => (
-                <div className='Projetos__container'>
-                    <div className='Projetos__container-header'>
-                        <div>
-                            <img alt='logo siemens' src={projeto.img} />
+            {projetos.map((projeto, index) => (
+                <div key={index} className='Projetos__item'>
+                    <div className='Projetos__container'>
+                        <div className='Projetos__container-header'>
+                            <div>
+                                <img alt='logo siemens' src={projeto.img} />
+                            </div>
+                            <div className='Projetos__container-projeto'>
+                                <h3 className='Projetos__container-titulo'>{projeto.titulo}</h3>
+                                <p className='Projetos__container-data'>{projeto.data}</p>
+                            </div>
                         </div>
-                        <div className='Projetos__container-projeto'>
-                            <h3 className='Projetos__container-titulo'> {projeto.titulo}</h3>
-                            <p className='Projetos__container-data'>{projeto.data}</p>
+
+                        <div className='Projetos__container-texto'>
+                            {projeto.texto}
                         </div>
                     </div>
-
-                    <div className='Projetos__container-texto'>
-                        {projeto.texto}
+                    <div className='Projetos__container-tecnologias'>
+                        <button className='botao__tecnologias'>{projeto.habilidades}</button>
                     </div>
-
-
                 </div>
             ))}
         </div>

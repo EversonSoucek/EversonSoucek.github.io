@@ -10,7 +10,7 @@
     margin: 0;
     padding: 0;
     position: relative;
-    z-index: 0;
+    z-index: 3;
 }
 
 /* Regras para telas menores */

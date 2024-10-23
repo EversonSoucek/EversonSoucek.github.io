@@ -4,30 +4,56 @@
     flex-direction: column;
     align-items: center;
     position: relative;
-    z-index: -30;
+    z-index: -1;
+}
+
+.Projetos__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .Projetos__container {
+    border: solid 0.5px #ffff;
     background-color: #1D1D1D;
-    width: 50%;
+    width: 40%;
     padding: 30px;
     border-radius: 27px;
     position: relative;
 }
 
-.Projetos__container::after {
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+
+.Projetos__container::after,
+.button--primary::before {
     content: "";
     position: absolute;
     height: 100%;
     width: 100%;
-    background: red;
+    background-image: conic-gradient(from var(--angle), transparent 90%, #ffff);
     top: 50%;
     left: 50%;
     translate: -50% -50%;
     z-index: -1;
-    padding: 10px ;
+    padding: 4px;
+    border-radius: 27px;
+    animation: 3s spin linear infinite;
 }
 
+@keyframes spin {
+    from {
+        --angle: 0deg
+    }
+
+    to {
+        --angle: 360deg
+    }
+}
 
 .Projetos__container-projeto {
     margin-left: 15px;
@@ -51,8 +77,19 @@
 
 
 .Projetos__container-texto {
-    color: #ffff ;
+    color: #ffff;
     font-size: var(--26px);
     text-align: left;
     margin-top: 40px;
+}
+
+
+.Projetos__container-tecnologias {
+    left: 0;
+}
+
+.botao__tecnologias{
+    color: #bcbcbc;
+    background-color: #151515 ;
+    border: solid 2px #ffff;
 }
