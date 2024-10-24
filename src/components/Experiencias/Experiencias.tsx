@@ -38,7 +38,7 @@ export default function Experiencias() {
         </SlideAnimation>
       </div>
 
-      {experiencias.map((experiencia) => (
+      {experiencias.map(( experiencia) => (
         <FadeBottomAnimation isInView={isInView}>
           <div className="experiencias__lista">
             <div className="experiencias__item">

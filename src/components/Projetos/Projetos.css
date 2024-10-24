@@ -4,22 +4,25 @@
     flex-direction: column;
     align-items: center;
     position: relative;
-    z-index: -1;
+    z-index: 0;
 }
 
 .Projetos__item {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .Projetos__container {
-    border: solid 0.5px #ffff;
+    margin: 0 auto;
+    border: solid 2px #ffff;
     background-color: #1D1D1D;
-    width: 40%;
+    width: 1050px;
+    height: 300px;
     padding: 30px;
     border-radius: 27px;
     position: relative;
+    text-align: center;
 }
 
 @property --angle {
@@ -29,8 +32,7 @@
 }
 
 
-.Projetos__container::after,
-.button--primary::before {
+.Projetos__container::after {
     content: "";
     position: absolute;
     height: 100%;
@@ -60,7 +62,7 @@
 }
 
 .Projetos__container-titulo {
-    font-family: "Poppins" sans-serif;
+    font-family: "Poppins", sans-serif;
     color: #ffff;
     font-size: var(--32px)
 }
@@ -85,11 +87,30 @@
 
 
 .Projetos__container-tecnologias {
-    left: 0;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
 }
 
 .botao__tecnologias{
+    display: flex;
+    align-items: center;
     color: #bcbcbc;
     background-color: #151515 ;
     border: solid 2px #ffff;
+    font-family: "Poppins", sans-serif;
+    border-radius: 27px;
+    font-size: var(--20px);
+    padding: 10px;
+    width: 200px;
+    height: 40px;
+}
+
+.botao__tecnologias:hover {
+    border-color: #61DBFB ;
+    color: #61DBFB ;
+}
+
+.setas {
+    margin-left: 51em;
 }
