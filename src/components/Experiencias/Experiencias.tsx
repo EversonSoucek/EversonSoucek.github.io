@@ -13,6 +13,7 @@ export default function Experiencias() {
   const isInView = useInView(ref, { once: true, amount: 0.1 });
 
   const experiencias = [{
+    id: 1,
     empresa: "Visual software",
     data: "Julho 2023 - Atual",
     cargo: "Analista de Qualidade",
@@ -20,6 +21,7 @@ export default function Experiencias() {
     imagem: visual
   },
   {
+    id: 2,
     empresa: "Siemens Gamesa",
     data: "Junho 2024",
     cargo: "Desenvolvedor Front-end | Freelancer",
@@ -31,16 +33,16 @@ export default function Experiencias() {
   return (
     <div className="experiencias" id='experiencias' ref={ref}>
       <div style={{ textAlign: 'center' }}>
-        <SlideAnimation duration={1} isInView={isInView}>
+        <SlideAnimation duration={0.75} isInView={isInView}>
           <FadeBottomAnimation isInView={isInView} duration={1}>
             <Titulo>Experiências</Titulo>
           </FadeBottomAnimation>
         </SlideAnimation>
       </div>
 
-      {experiencias.map(( experiencia) => (
+      {experiencias.map((experiencia) => (
         <FadeBottomAnimation isInView={isInView}>
-          <div className="experiencias__lista">
+          <div key={experiencia.id} className="experiencias__lista">
             <div className="experiencias__item">
               <div className="experiencias__logo">
                 <img src={experiencia.imagem} alt="Logo da Visual Software" className="experiencias__logo-imagem" />

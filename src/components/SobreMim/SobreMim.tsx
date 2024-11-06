@@ -13,7 +13,7 @@ export default function SobreMim() {
 
   return (
     <div className="sobreMim" id='sobre' ref={ref}>
-      <SlideAnimation isInView={isInView} duration={1}>
+      <SlideAnimation isInView={isInView} duration={0.75}>
         <FadeBottomAnimation isInView={isInView} duration={1}>
           <Titulo>Sobre Mim</Titulo>
         </FadeBottomAnimation>

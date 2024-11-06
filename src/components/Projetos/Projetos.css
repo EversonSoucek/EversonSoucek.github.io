@@ -5,6 +5,7 @@
     align-items: center;
     position: relative;
     z-index: 0;
+    height: 100vh;
 }
 
 .Projetos__item {
@@ -109,6 +110,7 @@
 .botao__tecnologias:hover {
     border-color: #61DBFB ;
     color: #61DBFB ;
+    box-shadow: 0 0 15px #61DBFB;
 }
 
 .setas {

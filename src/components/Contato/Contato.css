@@ -1,0 +1,79 @@
+.Contato {
+    background-color: #151515;
+    height: 100vh;
+}
+
+.titulo-form {
+    color: #ffff;
+    font-size: var(--40px);
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.Contato-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.Contato-form {
+    display: flex;
+    flex-direction: column;
+    background-color: #1d1d1d;
+    border: 2px solid #ffff;
+    border-radius: 27px;
+    width: 40%;
+    padding: 20px;
+}
+
+.caixatexto {
+    display: flex;
+    align-items: center;
+    height: 150px;
+    width: 95%;
+    background-color: #1d1d1d;
+    color: #ffff;
+    text-align: left;
+    border: 2px solid #ffff;
+}
+
+.caixatexto::placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+
+.Contato-botao {
+    background-color: #1d1d1d;
+    color: #ffff;
+    border: 2px solid #ffff;
+    margin-top: 27px;
+    width: 20%;
+    cursor: pointer;
+    font-size: var(--20px);
+}
+
+.Contato-botao:hover {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 1);
+}
+
+.Contatos {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    width: 30%;
+}
+
+.Contato-botaoemail {
+    font-size: var(--20px);
+    display: flex;
+    align-items: center;
+    color: #ffff;
+    background-color: #8331EB;
+    border-radius: 12px;
+    border: 1px solid #8331EB;
+    box-shadow: 0px 0px 5px #8331EB, 0px 0px 25px #8331EB;
+    cursor: pointer;
+}

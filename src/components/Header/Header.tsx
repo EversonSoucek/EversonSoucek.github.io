@@ -35,8 +35,8 @@ export default function Header() {
           <li><a href="#sobre" className='header__list-link'>Sobre Mim</a></li>
           <li><a href="#skills" className='header__list-link'>Skills</a></li>
           <li><a href="#experiencias" className='header__list-link'>Experiências</a></li>
-          <li><a href="#projects" className='header__list-link'>Projects</a></li>
-          <li><a href="#contact" className='header__list-link'>Contact</a></li>
+          <li><a href="#projetos" className='header__list-link'>Projetos</a></li>
+          <li><a href="#contato" className='header__list-link'>Contato</a></li>
         </ul>
         <div className='header__social'>
           <a href="https://github.com/EversonSoucek" target="_blank" rel="noopener noreferrer" className='header__social-icon'>

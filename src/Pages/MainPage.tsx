@@ -4,6 +4,8 @@ import './MainPage.css';
 import SobreMim from '../components/SobreMim/SobreMim';
 import Experiencias from '../components/Experiencias/Experiencias';
 import Projetos from '../components/Projetos/Projetos';
+import Contato from '../components/Contato/Contato';
+import Footer from '../components/Footer/Footer';
 
 export default function MainPage() {
   return (
@@ -13,8 +15,10 @@ export default function MainPage() {
         <Home />
       </div>
       <SobreMim />
-      <Experiencias/>
-      <Projetos/>
+      <Experiencias />
+      <Projetos />
+      <Contato />
+      <Footer />
     </>
 
   );
