@@ -1,5 +1,4 @@
 import './Experiencias.css'
-import es from "../../assets/img/ES Logo.png"
 import siemens from "../../assets/img/siemens_logo 1.png"
 import visual from "../../assets/img/VisualSoftwareLogo.png"
 import SlideAnimation from '../Animations/SlideAnimation/SlideAnimation'

@@ -1,27 +1,23 @@
-import React, { useRef } from 'react';
+import { useRef } from 'react';
 import Titulo from '../Titulo/Titulo';
 import "./Contato.css";
 import InputForm from './InputForm';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { IoCopyOutline } from 'react-icons/io5';
 import { toast, Toaster } from 'sonner';
-import { useInView } from 'framer-motion';
 
 export default function Contato() {
     const ref = useRef(null);
-    const isInView = useInView(ref, { once: true, amount: 0.1 });
-    const [result, setResult] = React.useState("");
     const emailKey = import.meta.env.VITE_EMAIL;
 
     const onSubmit = async (event) => {
         event.preventDefault();
-        setResult("Sending...");
 
         const formData = new FormData(event.target);
         formData.append("access_key", `${emailKey}`);
-        
-        const userEmail = formData.get("email");
-        const userMessage = formData.get("message");
+
+        // Obtendo o e-mail do formulário
+        const userEmail = event.target.email.value; // Aqui é onde você pega o e-mail
 
         // Primeiro envia para o Web3Forms
         const response = await fetch("https://api.web3forms.com/submit", {
@@ -32,7 +28,6 @@ export default function Contato() {
         const data = await response.json();
 
         if (data.success) {
-            setResult("Form Submitted Successfully");
             toast.success("E-mail Enviado", { style: estiloToasty });
             event.target.reset();
 
@@ -44,7 +39,7 @@ export default function Contato() {
                         "Content-Type": "application/json",
                     },
                     body: JSON.stringify({
-                        toMail: userEmail,
+                        toMail: userEmail, // Agora 'userEmail' é definido
                         content: "Obrigado por entrar em contato! Vamos te responder o quanto antes."
                     })
                 });
@@ -59,7 +54,6 @@ export default function Contato() {
         } else {
             console.log("Error", data);
             toast.error("E-mail não enviado, ocorreu um erro");
-            setResult(data.message);
         }
     };
 
@@ -85,8 +79,8 @@ export default function Contato() {
             <div className='Contato-container' ref={ref}>
                 <form onSubmit={onSubmit} className='Contato-form'>
                     <h3 className='titulo-form'>Entre em contato</h3>
-                    <InputForm placeholder="Nome" nome="name" />
-                    <InputForm placeholder="Email" nome="email" />
+                    <InputForm placeholder="Nome" nome="name" tipo="" />
+                    <InputForm placeholder="Email" nome="email" tipo="" />
                     <textarea placeholder='Mensagem aqui' className='caixatexto' name='message' required />
                     <button type='submit' className='Contato-botao'>
                         Enviar
@@ -94,14 +88,14 @@ export default function Contato() {
                 </form>
                 <div className='Contatos'>
                     <a href="https://www.linkedin.com/in/everson-soucek-152984232/" target="_blank" rel="noopener noreferrer" className='header__social-icon'>
-                        <FaLinkedin size={80} color='#8331EB' alt="Logo do linkedin" />
+                        <FaLinkedin size={80} color='#8331EB' />
                     </a>
                     <a href="https://github.com/EversonSoucek" target="_blank" rel="noopener noreferrer" className='header__social-icon'>
-                        <FaGithub size={80} color='#8331EB' alt="Logo do github" />
+                        <FaGithub size={80} color='#8331EB' />
                     </a>
                     <Toaster />
                     <button className='Contato-botaoemail' onClick={clicaBotaoEmail}>
-                        <IoCopyOutline size={25} alt="Simbolo para copiar texto" /> Copie meu endereço de e-mail
+                        <IoCopyOutline size={25} /> Copie meu endereço de e-mail
                     </button>
                 </div>
             </div>

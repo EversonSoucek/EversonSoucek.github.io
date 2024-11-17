@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import logo from "../../assets/img/ES Logo.png";
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import "./Header.css";
@@ -57,10 +57,10 @@ export default function Header() {
         </ul>
         <div className='header__social'>
           <a href="https://github.com/EversonSoucek" target="_blank" rel="noopener noreferrer" className='header__social-icon'>
-            <FaGithub className="header__icon" size={40} color='#8331EB' alt="Logo do github" />
+            <FaGithub className="header__icon" size={40} color='#8331EB' />
           </a>
           <a href="https://www.linkedin.com/in/everson-soucek-152984232/" target="_blank" rel="noopener noreferrer" className='header__social-icon'>
-            <FaLinkedin className="header__icon" size={40} color='#8331EB' alt="Logo do linkedin" />
+            <FaLinkedin className="header__icon" size={40} color='#8331EB' />
           </a>
         </div>
       </nav>

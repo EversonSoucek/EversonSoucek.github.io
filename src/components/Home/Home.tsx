@@ -29,8 +29,8 @@ const Home = () => {
 
         <FadeBottomAnimation isInView={isInView}>
           <div>
-            <Button className="button--primary">Mais sobre mim</Button>
-            <Button className=" button--secondary">Me contate</Button>
+            <Button href="#sobre" className="button--primary">Mais sobre mim</Button>
+            <Button href="#contato" className=" button--secondary">Me contate</Button>
           </div>
         </FadeBottomAnimation>
       </div>

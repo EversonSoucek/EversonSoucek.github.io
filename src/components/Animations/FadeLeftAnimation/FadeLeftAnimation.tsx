@@ -1,5 +1,5 @@
 import { motion,useAnimation } from 'framer-motion'
-import React, { useEffect } from 'react'
+import { useEffect } from 'react'
 
 export default function FadeLeftAnimation({ isInView, duration = 0.5, delay = 0.25, children }) {
     const fadeControls = useAnimation();

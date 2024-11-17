@@ -1,4 +1,3 @@
-import React from 'react'
 import "./Skills.css"
 import Titulo from '../Titulo/Titulo'
 import react from "../../assets/img/ReactLogo.png"

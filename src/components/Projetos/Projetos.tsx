@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 import Titulo from '../Titulo/Titulo';
 import './Projetos.css';
 import siemens from '../../assets/img/siemens_logo 1.png';
