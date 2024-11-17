@@ -20,7 +20,7 @@ const Home = () => {
         </SlideAnimation>
 
         <FadeLeftAnimation isInView={isInView}>
-          <h2 className="Home__subtitulo">Front-end</h2>
+          <h2 className="Home__subtitulo">Web Dev</h2>
           <p className="Home__descricao">
             Engenheiro de Software focado em desenvolvimento web, com experiência
             em React e C#.

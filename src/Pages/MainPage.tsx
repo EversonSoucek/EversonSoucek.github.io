@@ -6,6 +6,7 @@ import Experiencias from '../components/Experiencias/Experiencias';
 import Projetos from '../components/Projetos/Projetos';
 import Contato from '../components/Contato/Contato';
 import Footer from '../components/Footer/Footer';
+import Skills from '../components/Skills/Skills';
 
 export default function MainPage() {
   return (
@@ -15,6 +16,7 @@ export default function MainPage() {
         <Home />
       </div>
       <SobreMim />
+      <Skills/>
       <Experiencias />
       <Projetos />
       <Contato />

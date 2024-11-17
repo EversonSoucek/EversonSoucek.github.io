@@ -19,11 +19,15 @@
     border: solid 2px #ffff;
     background-color: #1D1D1D;
     width: 1050px;
-    height: 300px;
+    min-height: 400px; /* Mantém a altura mínima */
     padding: 30px;
     border-radius: 27px;
     position: relative;
     text-align: center;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: auto; /* Permite que o container se expanda conforme o conteúdo */
 }
 
 @property --angle {
@@ -31,7 +35,6 @@
     initial-value: 0deg;
     inherits: false;
 }
-
 
 .Projetos__container::after {
     content: "";
@@ -50,11 +53,11 @@
 
 @keyframes spin {
     from {
-        --angle: 0deg
+        --angle: 0deg;
     }
 
     to {
-        --angle: 360deg
+        --angle: 360deg;
     }
 }
 
@@ -65,7 +68,7 @@
 .Projetos__container-titulo {
     font-family: "Poppins", sans-serif;
     color: #ffff;
-    font-size: var(--32px)
+    font-size: var(--32px);
 }
 
 .Projetos__container-data {
@@ -78,14 +81,15 @@
     display: flex;
 }
 
-
 .Projetos__container-texto {
     color: #ffff;
     font-size: var(--26px);
     text-align: left;
     margin-top: 40px;
+    overflow-y: auto;
+    flex-grow: 1;
+    max-height: calc(100% - 150px); /* Limita a altura do texto, mas permite que o container se expanda */
 }
-
 
 .Projetos__container-tecnologias {
     margin-top: 20px;
@@ -93,11 +97,11 @@
     align-items: center;
 }
 
-.botao__tecnologias{
+.botao__tecnologias {
     display: flex;
     align-items: center;
     color: #bcbcbc;
-    background-color: #151515 ;
+    background-color: #151515;
     border: solid 2px #ffff;
     font-family: "Poppins", sans-serif;
     border-radius: 27px;
@@ -108,11 +112,68 @@
 }
 
 .botao__tecnologias:hover {
-    border-color: #61DBFB ;
-    color: #61DBFB ;
+    border-color: #61DBFB;
+    color: #61DBFB;
     box-shadow: 0 0 15px #61DBFB;
 }
 
 .setas {
     margin-left: 51em;
+}
+
+/* Ajustes para telas menores */
+@media (max-width: 768px) {
+    .Projetos__container {
+        width: 90%; /* Ajuste a largura no mobile */
+        min-height: 450px; /* Altura reduzida */
+        padding: 20px; /* Ajusta o padding */
+    }
+
+    .Projetos__container-titulo {
+        font-size: 1.5rem; /* Ajusta o tamanho da fonte do título */
+    }
+
+    .Projetos__container-data {
+        font-size: 1rem; /* Ajusta o tamanho da fonte da data */
+    }
+
+    .Projetos__container-texto {
+        font-size: 1.2rem; /* Ajusta o tamanho da fonte do texto */
+    }
+
+    .botao__tecnologias {
+        font-size: 1rem; /* Ajusta o tamanho da fonte do botão */
+        width: 150px; /* Ajusta o tamanho do botão */
+        height: 35px; /* Ajusta o tamanho do botão */
+    }
+
+    .setas {
+        margin-left: 0; /* Remove o espaçamento das setas */
+        margin-top: 20px; /* Adiciona margem superior */
+    }
+}
+
+@media (max-width: 480px) {
+    .Projetos__container {
+        width: 100%; /* Largura 100% para telas menores */
+        min-height: 400px; /* Altura reduzida */
+    }
+
+    .Projetos__container-titulo {
+        font-size: 1.3rem; /* Ajusta o tamanho da fonte */
+    }
+
+    .Projetos__container-data {
+        font-size: 0.9rem; /* Ajusta o tamanho da data */
+    }
+
+    .Projetos__container-texto {
+        font-size: 1rem; /* Ajusta o tamanho do texto */
+    }
+
+    .botao__tecnologias {
+        font-size: 0.9rem; /* Ajusta o tamanho do botão */
+        width: 120px; /* Ajusta o tamanho do botão */
+        height: 30px; /* Ajusta o tamanho do botão */
+    }
 }

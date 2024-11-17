@@ -5,11 +5,9 @@ import "./Header.css";
 
 export default function Header() {
   const [opacidade, setOpacidade] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
 
-
-  // Calcula a opacidade com base na posição de scroll da página:
-  // - posicaoScroll / 1000: Aumenta a opacidade gradualmente conforme o scroll (0 a 1).
-  // - Math.min(1, ...): Garante que a opacidade não ultrapasse 1, mesmo com scroll maior que 1000.
+  // Calcula a opacidade com base na posição de scroll da página
   useEffect(() => {
     const controlaOpacidadeAoScrollar = () => {
       const posicaoScroll = window.scrollY;
@@ -23,6 +21,25 @@ export default function Header() {
       window.removeEventListener('scroll', controlaOpacidadeAoScrollar);
     };
   }, []);
+
+  // Detecta se o dispositivo é mobile
+  useEffect(() => {
+    const verificaDispositivo = () => {
+      setIsMobile(window.innerWidth <= 768); // Define o limite para mobile
+    };
+
+    verificaDispositivo(); // Verifica ao carregar o componente
+    window.addEventListener('resize', verificaDispositivo);
+
+    return () => {
+      window.removeEventListener('resize', verificaDispositivo);
+    };
+  }, []);
+
+  // Retorna nulo se estiver em um dispositivo móvel
+  if (isMobile) {
+    return null;
+  }
 
   return (
     <header className='header' style={{ backgroundColor: `rgba(21, 21, 21, ${opacidade})` }}>

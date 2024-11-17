@@ -35,7 +35,7 @@ export default function Experiencias() {
       <div style={{ textAlign: 'center' }}>
         <SlideAnimation duration={0.75} isInView={isInView}>
           <FadeBottomAnimation isInView={isInView} duration={1}>
-            <Titulo>Experiências</Titulo>
+            <Titulo className="experiencias__titulo">Experiências</Titulo>
           </FadeBottomAnimation>
         </SlideAnimation>
       </div>

@@ -20,7 +20,7 @@
 }
 
 .experiencias__item::before {
-    content: '';
+    content: ''; /* Removido a linha para mobile */
     position: absolute;
     left: 40px;
     top: 80px;
@@ -48,7 +48,7 @@
 }
 
 .experiencias__empresa {
-    font-family: "Poppins",sans-serif;
+    font-family: "Poppins", sans-serif;
     font-size: var(--32px);
     font-weight: bold;
     margin-bottom: 8px;
@@ -62,7 +62,7 @@
 }
 
 .experiencias__cargo {
-    font-family: "Poppins",sans-serif;
+    font-family: "Poppins", sans-serif;
     font-size: var(--26px);
     font-weight: bold;
     margin-bottom: 12px;
@@ -74,18 +74,47 @@
     color: #CCCCCC;
 }
 
+/* Ajustes para dispositivos móveis */
 @media (max-width: 768px) {
     .experiencias__item {
         flex-direction: column;
+        margin-bottom: 20px; /* Reduzindo o espaço entre os itens */
     }
 
     .experiencias__logo {
-        margin-bottom: 20px;
+        width: 60px; /* Reduzindo o tamanho do logo */
+        height: 60px; /* Reduzindo o tamanho do logo */
+        margin-right: 0; /* Removendo a margem direita */
+        margin-bottom: 15px; /* Ajuste da margem inferior */
     }
 
     .experiencias__item::before {
-        left: 40px;
-        top: 80px;
-        bottom: -40px;
+        display: none; /* Removendo a linha nos itens para mobile */
+    }
+
+    .experiencias__empresa {
+        font-size: var(--24px); /* Reduzindo o tamanho da fonte da empresa */
+        margin-bottom: 6px; /* Menor margem */
+    }
+
+    .experiencias__data {
+        font-size: var(--20px); /* Ajustando o tamanho da fonte da data */
+        margin-left: 0; /* Removendo a margem esquerda */
+        margin-bottom: 8px; /* Menor margem inferior */
+    }
+
+    .experiencias__cargo {
+        font-size: var(--22px); /* Ajustando o tamanho da fonte do cargo */
+        margin-bottom: 10px; /* Menor margem inferior */
+    }
+
+    .experiencias__descricao {
+        font-size: var(--20px); /* Reduzindo o tamanho da descrição */
+        line-height: 1.4; /* Ajustando a linha */
+    }
+
+    .experiencias__titulo {
+        font-size: var(--20px); /* Tamanho menor no mobile */
+        margin-bottom: 20px; /* Menor margem inferior */
     }
 }

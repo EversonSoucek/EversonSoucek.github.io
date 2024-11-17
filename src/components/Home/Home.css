@@ -63,34 +63,52 @@
 
 /* Regras para telas menores (responsividade) */
 @media (max-width: 768px) {
+    /* Remove o espaço branco no mobile */
     .Home {
-        margin-left: 0;
-        padding-left: 20px; /* Reduz o padding para dispositivos móveis */
-        justify-content: center; /* Centraliza o conteúdo no mobile */
-        align-items: center;
-        height: 100vh; /* Ajusta a altura para ocupar a tela inteira */
+        margin: 0; /* Remove margens extras */
+        padding: 0 20px; /* Padding adequado */
+        justify-content: center; /* Centraliza o conteúdo */
+        align-items: center; /* Alinha verticalmente */
+        height: 100vh;
+        width: 100%; /* Garante que a largura não exceda a viewport */
+        overflow-x: hidden; /* Impede transbordo horizontal */
+        flex-direction: column;
     }
 
     .Home__conteudo {
+        max-width: 100%; /* Garante que o conteúdo fique dentro da largura */
+        padding: 0 10px; /* Adiciona padding para evitar corte */
         text-align: center; /* Centraliza o texto */
-        padding: 0 10px; /* Adiciona padding lateral para evitar cortes de texto */
     }
 
     .Home__Nome {
-        font-size: 2.5rem; /* Diminui o tamanho do título no mobile */
+        font-size: 2rem; /* Ajusta o tamanho do texto */
+        margin-bottom: 15px; /* Ajusta o espaçamento */
+        word-wrap: break-word; /* Quebra palavras muito longas */
     }
 
-    .Home__subtitulo {
-        font-size: 1.8rem; /* Ajusta o subtítulo */
-    }
-
+    .Home__subtitulo,
     .Home__descricao {
-        font-size: 1rem; /* Diminui o tamanho da descrição */
-        line-height: 1.2;
+        word-wrap: break-word; /* Evita que palavras longas causem transbordo */
+    }
+
+    .Home__buttons {
+        display: flex;
+        flex-direction: column; /* Empilha os botões */
+        align-items: center; /* Centraliza os botões */
+        width: 100%; /* Garante alinhamento */
+        max-width: 300px; /* Evita que os botões excedam a largura */
     }
 
     .Home__button {
-        font-size: 1rem; /* Ajusta o tamanho dos botões */
-        padding: 10px 20px;
+        width: 100%; /* Garante que o botão ocupe toda a largura */
+        margin: 5px 0; /* Espaçamento entre botões */
+        box-sizing: border-box; /* Inclui padding nas dimensões */
+    }
+
+    /* Previne transbordo horizontal geral */
+    body {
+        overflow-x: hidden; /* Remove qualquer deslocamento horizontal */
     }
 }
+

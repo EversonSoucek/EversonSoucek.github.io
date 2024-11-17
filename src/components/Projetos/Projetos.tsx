@@ -19,7 +19,6 @@ export default function Projetos() {
     function mudaProjeto(valor) {
         if (count + valor <= 1 && count + valor >= 0) {
             setCount(count + valor);
-            console.log(count);
         }
     }
 
@@ -29,7 +28,7 @@ export default function Projetos() {
         data: "ago-2024",
         img: siemens,
         texto: "Eu desenvolvi um sistema automatizado para geração de contratos no departamento de vendas da Siemens Gamesa, substituindo um processo manual. A solução gera contratos PDF personalizados, adaptando automaticamente informações como endereço, data e tipo de moeda para diferentes clientes. O sistema também inclui validações rigorosas para garantir a precisão dos dados.",
-        habilidades: "React.js and PDF",
+        habilidades: "React.js",
         logo: <FaReact color='#61DBFB' size={30} />
     },
     {

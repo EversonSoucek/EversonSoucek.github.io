@@ -44,15 +44,14 @@
     text-align: center;
 }
 
-
 .Contato-botao {
     background-color: #1d1d1d;
     color: #ffff;
     border: 2px solid #ffff;
     margin-top: 27px;
-    width: 20%;
+    width: 18%; /* Diminuindo a largura do botão */
     cursor: pointer;
-    font-size: var(--20px);
+    font-size: var(--18px); /* Diminui o tamanho da fonte */
 }
 
 .Contato-botao:hover {
@@ -61,6 +60,7 @@
 
 .Contatos {
     display: flex;
+    flex-direction: row; /* Alinha os ícones em uma linha */
     justify-content: space-between;
     margin-top: 40px;
     width: 30%;
@@ -76,4 +76,66 @@
     border: 1px solid #8331EB;
     box-shadow: 0px 0px 5px #8331EB, 0px 0px 25px #8331EB;
     cursor: pointer;
+}
+
+/* Responsividade para telas pequenas */
+@media (max-width: 768px) {
+    .Contato-form {
+        width: 90%; /* Aumenta a largura do formulário em telas menores */
+        padding: 15px; /* Ajusta o padding para telas menores */
+    }
+
+    .titulo-form {
+        font-size: 1.5rem; /* Ajusta o tamanho do título */
+        margin-bottom: 15px; /* Reduz a margem inferior */
+    }
+
+    .caixatexto {
+        height: 120px; /* Ajusta a altura da caixa de texto */
+    }
+
+    .Contato-botao {
+        width: 35%; /* Reduz a largura do botão para telas menores */
+        font-size: 1.1rem; /* Ajusta o tamanho da fonte do botão */
+    }
+
+    .Contatos {
+        width: 70%; /* Aumenta a largura do container de contatos */
+        margin-top: 20px; /* Ajusta a margem superior */
+    }
+
+    .Contato-botaoemail {
+        font-size: 1.2rem; /* Ajusta o tamanho da fonte do botão de email */
+        width: 45%; /* Aumenta a largura do botão */
+        margin-top: 10px; /* Ajusta a margem superior */
+    }
+}
+
+@media (max-width: 480px) {
+    .Contato-form {
+        width: 100%; /* Largura total em telas muito pequenas */
+    }
+
+    .titulo-form {
+        font-size: 1.2rem; /* Ajusta o tamanho do título */
+    }
+
+    .caixatexto {
+        height: 100px; /* Reduz a altura da caixa de texto */
+    }
+
+    .Contato-botao {
+        width: 50%; /* Ajusta a largura do botão para ser um pouco menor */
+    }
+
+    .Contatos {
+        width: 100%; /* Largura total para telas muito pequenas */
+        margin-top: 15px; /* Ajusta a margem superior */
+        justify-content: space-between; /* Garante que os ícones fiquem lado a lado */
+    }
+
+    .Contato-botaoemail {
+        font-size: 1rem; /* Ajusta o tamanho da fonte do botão de email */
+        width: 75%; /* Ajusta a largura do botão */
+    }
 }

@@ -15,7 +15,6 @@
     animation: gradient 4s linear infinite;
     text-align: center;
     line-height: normal;
-
 }
 
 @keyframes gradient {
@@ -24,5 +23,20 @@
     }
     100% {
         background-position: 200% center;
+    }
+}
+
+/* Ajustes para dispositivos móveis */
+@media (max-width: 768px) {
+    .titulo {
+        font-size: 48px; /* Reduzindo o tamanho da fonte para telas menores */
+        margin-bottom: 30px; /* Ajustando a margem inferior */
+    }
+}
+
+@media (max-width: 480px) {
+    .titulo {
+        font-size: 36px; /* Reduzindo ainda mais o tamanho da fonte para telas muito pequenas */
+        margin-bottom: 20px; /* Ajustando a margem inferior */
     }
 }
