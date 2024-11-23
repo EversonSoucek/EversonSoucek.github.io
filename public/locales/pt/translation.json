@@ -1,0 +1,56 @@
+{
+  "home": {
+    "title": "Eu sou Everson Soucek",
+    "subtitle": "Desenvolvedor Web",
+    "description": "Engenheiro de Software focado em desenvolvimento web, com experiência em React e C#.",
+    "moreAboutMe": "Mais sobre mim",
+    "contactMe": "Entre em contato"
+  },
+  "header": {
+    "home": "Início",
+    "aboutMe": "Sobre Mim",
+    "skills": "Habilidades",
+    "experiences": "Experiências",
+    "projects": "Projetos",
+    "contact": "Contato"
+  },
+  "aboutMe": {
+    "title": "Sobre Mim",
+    "workTitle": "Trabalho",
+    "workDescription": "Estudante de engenharia de software no 6° período, atuando como analista de QA em um ERP de gestão empresarial, envolvido na realização de testes exploratórios e documentação de novas funcionalidades do software.",
+    "studyTitle": "Estudos",
+    "studyDescription": "Interesses em testes automatizados com Robot Framework em Python e desenvolvimento Fullstack com MERN Stack."
+  },
+  "experiences": {
+    "title": "Experiências",
+    "qaAnalyst": "Analista de Qualidade",
+    "qaDescription": "Atuando como analista de QA em um ERP de gestão empresarial, envolvido na realização de testes exploratórios, criação de casos de testes e documentação de novas funcionalidades do software.",
+    "frontendDeveloper": "Desenvolvedor Front-end | Freelancer",
+    "contractSystem": "Desenvolvi um sistema para automatizar a geração de contratos no setor de vendas. Para mais detalhes, consulte a seção de projetos."
+  },
+  "projects": {
+    "title": "Projetos",
+    "contractGenerator": "Gerador de Contrato",
+    "contractGeneratorDescription": "Eu desenvolvi um sistema automatizado para geração de contratos no departamento de vendas da Siemens Gamesa, substituindo um processo manual. A solução gera contratos PDF personalizados, adaptando automaticamente informações como endereço, data e tipo de moeda para diferentes clientes. O sistema também inclui validações rigorosas para garantir a precisão dos dados.",
+    "reactSkills": "React.js",
+    "comingSoon": "Em Breve",
+    "comingSoonDescription": "Mais projetos estão em construção",
+    "projects.inConstruction":"Em Breve"
+  },
+  "contact": {
+    "title": "Me contate",
+    "formTitle": "Entre em contato",
+    "formName": "Nome",
+    "formEmail": "Email",
+    "formMessage": "Mensagem aqui",
+    "formSendButton": "Enviar",
+    "emailError": "Erro ao enviar o e-mail. Tente novamente mais tarde.",
+    "emailSuccess": "E-mail enviado com sucesso!",
+    "requestError": "Erro ao processar a requisição. Tente novamente mais tarde.",
+    "emailCopied": "E-mail copiado para a área de transferência",
+    "emailButton": "Copie meu endereço de e-mail"
+  },
+  "footer": {
+    "copyright": "© 2024 Everson Soucek. Todos os direitos reservados."
+  }
+}

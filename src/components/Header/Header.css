@@ -1,12 +1,12 @@
 /* Mantém o CSS do desktop igual */
 .header {
     background-color: transparent;
-    height: auto; 
-    min-height: 10vh; 
+    height: auto;
+    min-height: 10vh;
     position: fixed;
     z-index: 100;
     color: #FFFFFF;
-    padding: 5px 0; 
+    padding: 5px 0;
     transition: background-color 0.3s ease;
     width: 100%;
     z-index: 5;
@@ -39,12 +39,29 @@
     margin-left: 15px;
 }
 
+.header__languages {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-left: auto;
+}
+
+.header__language-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+/* Regras adicionadas para mobile */
 /* Regras adicionadas para mobile */
 @media (max-width: 768px) {
     .header {
-        position: relative; /* Remove a fixação no mobile */
+        position: relative;
+        /* Remove a fixação no mobile */
         display: flex;
-        width: 100%; /* Certifica-se de que ocupa toda a largura */
+        width: 100%;
+        /* Certifica-se de que ocupa toda a largura */
     }
 
     .header__nav {
@@ -69,58 +86,84 @@
     }
 
     .header__icon {
-        size: 30px; /* Ajuste no tamanho dos ícones para mobile */
+        size: 30px;
+        /* Ajuste no tamanho dos ícones para mobile */
     }
 
     .header__logo {
-        width: 50px; /* Diminui o tamanho do logo no mobile */
+        width: 50px;
+        /* Diminui o tamanho do logo no mobile */
+    }
+
+    /* Alinhando as bandeiras à direita no mobile */
+    .header__languages {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        width: 100%;
+        margin-left: auto;
+        position: absolute;
+        right: 10px; /* Alinha as bandeiras à direita */
     }
 }
+
 
 /* Regras adicionais para desktops menores */
 @media (max-width: 1024px) and (min-width: 769px) {
     .header {
-        padding: 10px 20px; /* Ajusta o espaçamento */
+        padding: 10px 20px;
+        /* Ajusta o espaçamento */
     }
 
     .header__list {
-        margin-left: 150px; /* Reduz o espaçamento lateral */
+        margin-left: 150px;
+        /* Reduz o espaçamento lateral */
     }
 
     .header__list-link {
-        font-size: 20px; /* Ajusta o tamanho da fonte */
-        margin-left: 40px; /* Diminui o espaço entre os links */
+        font-size: 20px;
+        /* Ajusta o tamanho da fonte */
+        margin-left: 40px;
+        /* Diminui o espaço entre os links */
     }
 
     .header__social {
-        margin-left: 50px; /* Reduz a margem dos ícones sociais */
+        margin-left: 50px;
+        /* Reduz a margem dos ícones sociais */
     }
 }
 
 /* Regras adicionais para resolução 1610px x 955px */
 @media (max-width: 1610px) and (max-height: 955px) {
     .header {
-        padding: 8px 15px; /* Ajuste no espaçamento superior e lateral */
+        padding: 8px 15px;
+        /* Ajuste no espaçamento superior e lateral */
     }
 
     .header__list {
-        margin-left: 120px; /* Reduz o deslocamento da lista */
+        margin-left: 120px;
+        /* Reduz o deslocamento da lista */
     }
 
     .header__list-link {
-        font-size: 22px; /* Reduz ligeiramente o tamanho da fonte */
-        margin-left: 35px; /* Reduz o espaçamento entre os links */
+        font-size: 22px;
+        /* Reduz ligeiramente o tamanho da fonte */
+        margin-left: 35px;
+        /* Reduz o espaçamento entre os links */
     }
 
     .header__social {
-        margin-left: 40px; /* Menor margem para os ícones sociais */
+        margin-left: 40px;
+        /* Menor margem para os ícones sociais */
     }
 
     .header__nav {
-        gap: 10px; /* Adiciona espaço entre os itens do menu */
+        gap: 10px;
+        /* Adiciona espaço entre os itens do menu */
     }
 
     .header__logo {
-        width: 80px; /* Diminui o tamanho do logo */
+        width: 80px;
+        /* Diminui o tamanho do logo */
     }
 }

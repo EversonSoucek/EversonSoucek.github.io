@@ -113,7 +113,7 @@
 
 @media (max-width: 480px) {
     .Contato-form {
-        width: 100%; /* Largura total em telas muito pequenas */
+        width: 80%; /* Largura total em telas muito pequenas */
     }
 
     .titulo-form {
@@ -136,6 +136,6 @@
 
     .Contato-botaoemail {
         font-size: 1rem; /* Ajusta o tamanho da fonte do botão de email */
-        width: 75%; /* Ajusta a largura do botão */
+        width: 60%; /* Ajusta a largura do botão */
     }
 }

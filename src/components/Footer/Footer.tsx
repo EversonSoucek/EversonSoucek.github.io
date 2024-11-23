@@ -1,9 +1,12 @@
-import "./Footer.css"
+import { useTranslation } from 'react-i18next';
+import "./Footer.css";
 
 export default function Footer() {
+    const { t } = useTranslation();  // Acessa a função de tradução
+
     return (
         <footer className='rodape'>
-            © 2024 Everson Soucek. Todos os direitos reservados.
+            {t('footer.copyright')}
         </footer>
-    )
+    );
 }

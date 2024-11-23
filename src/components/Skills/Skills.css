@@ -1,11 +1,6 @@
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-}
-
-* {
+html, body {
     margin: 0;
+    padding: 0;
 }
 
 .container {
@@ -27,11 +22,13 @@
     height: 500px;
     margin-top: 5rem;
     overflow: hidden;
-    mask-image: linear-gradient(to right,
-            rgba(0, 0, 0, 0),
-            rgba(0, 0, 0, 1) 20%,
-            rgba(0, 0, 0, 1) 80%,
-            rgba(0, 0, 0, 0));
+    mask-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 1) 20%,
+        rgba(0, 0, 0, 1) 80%,
+        rgba(0, 0, 0, 0)
+    );
 }
 
 @keyframes scrollLeft {
@@ -42,11 +39,11 @@
 
 .item {
     position: absolute;
-    width: 230px; /* Largura ajustada */
-    height: 270px; /* Altura ajustada */
+    width: 230px;
+    height: 270px;
     background-color: #242424;
     border-radius: 6px;
-    left: max(calc(230px * 8), 100%); /* Atualizando o cálculo de largura */
+    left: max(calc(230px * 8), 100%);
     animation-name: scrollLeft;
     animation-duration: 30s;
     animation-timing-function: linear;
@@ -58,10 +55,10 @@
 }
 
 .item img {
-    width: 100px; /* Tamanho da imagem ajustado */
-    height: 110px; /* Tamanho da imagem ajustado */
+    width: 100px;
+    height: 110px;
     object-fit: contain;
-    margin-top: 50px; /* Menor espaçamento entre a imagem e o topo */
+    margin-top: 50px;
 }
 
 .item-name {
@@ -111,30 +108,29 @@
     animation-delay: calc(30s / 8 * (8 - 8) * -1);
 }
 
-
 @media (max-width: 768px) {
     .wrapper {
-        height: 300px; /* Ajuste da altura no mobile */
-        margin-top: 2rem; /* Ajuste da margem superior */
+        height: 300px;
+        margin-top: 2rem;
     }
 
     .item {
-        width: 150px; /* Reduzindo a largura dos itens */
-        height: 180px; /* Reduzindo a altura dos itens */
-        left: max(calc(150px * 7), 100%); /* Ajustando a distância entre os itens */
+        width: 150px;
+        height: 180px;
+        left: max(calc(150px * 7), 100%);
     }
 
     .item img {
-        width: 60px; /* Reduzindo o tamanho das imagens */
-        height: 70px; /* Reduzindo o tamanho das imagens */
+        width: 60px;
+        height: 70px;
     }
 
     .item-name {
-        font-size: 0.9rem; /* Ajustando o tamanho da fonte para mobile */
+        font-size: 0.9rem;
     }
 
     .skills {
-        height: auto; /* Ajuste da altura da skill para mobile */
-        padding-bottom: 20px; /* Espaço inferior adicional */
+        height: auto;
+        padding-bottom: 20px;
     }
 }

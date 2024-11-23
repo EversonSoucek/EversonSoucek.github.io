@@ -1,0 +1,55 @@
+{
+  "home": {
+    "title": "I am Everson Soucek",
+    "subtitle": "Web Developer",
+    "description": "Software Engineer focused on web development, with experience in React and C#.",
+    "moreAboutMe": "More about me",
+    "contactMe": "Contact me"
+  },
+  "header": {
+    "home": "Home",
+    "aboutMe": "About Me",
+    "skills": "Skills",
+    "experiences": "Experiences",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "aboutMe": {
+    "title": "About Me",
+    "workTitle": "Work",
+    "workDescription": "Software Engineering student in the 6th semester, working as a QA analyst in an ERP system, involved in exploratory testing and documentation of new software features.",
+    "studyTitle": "Studies",
+    "studyDescription": "Interests in automated testing with Robot Framework in Python and Fullstack development with MERN Stack."
+  },
+  "experiences": {
+    "title": "Experiences",
+    "qaAnalyst": "Quality Analyst",
+    "qaDescription": "Working as a QA analyst in an ERP system, involved in exploratory testing, creating test cases, and documenting new software features.",
+    "frontendDeveloper": "Frontend Developer | Freelancer",
+    "contractSystem": "Developed a system to automate contract generation in the sales department. For more details, refer to the projects section."
+  },
+  "projects": {
+    "title": "Projects",
+    "contractGenerator": "Contract Generator",
+    "contractGeneratorDescription": "I developed an automated system for contract generation in the Siemens Gamesa sales department, replacing a manual process. The solution generates personalized PDF contracts, automatically adapting information such as address, date, and currency type for different clients. The system also includes strict validations to ensure data accuracy.",
+    "reactSkills": "React.js",
+    "comingSoon": "Coming Soon",
+    "comingSoonDescription": "More projects are under construction"
+  },
+  "contact": {
+    "title": "Contact Me",
+    "formTitle": "Get in Touch",
+    "formName": "Name",
+    "formEmail": "Email",
+    "formMessage": "Message here",
+    "formSendButton": "Send",
+    "emailError": "Error sending the email. Please try again later.",
+    "emailSuccess": "Email sent successfully!",
+    "requestError": "Error processing the request. Please try again later.",
+    "emailCopied": "Email copied to clipboard",
+    "emailButton": "Copy my email address"
+  },
+  "footer": {
+    "copyright": "© 2024 Everson Soucek. All rights reserved."
+  }
+}

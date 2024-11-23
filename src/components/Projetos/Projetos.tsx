@@ -10,8 +10,10 @@ import FadeBottomAnimation from '../Animations/FadeBottomAnimation/FadeBottomAni
 import { useInView } from 'framer-motion';
 import SlideAnimation from '../Animations/SlideAnimation/SlideAnimation';
 import FadeLeftAnimation from '../Animations/FadeLeftAnimation/FadeLeftAnimation';
+import { useTranslation } from 'react-i18next'; // Importar o hook de tradução
 
 export default function Projetos() {
+    const { t } = useTranslation(); // Acessa a função de tradução
     const [count, setCount] = useState(0);
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true, amount: 0.1 });
@@ -24,20 +26,20 @@ export default function Projetos() {
 
     const projetos = [{
         id: 1,
-        titulo: "Gerador de contrato",
+        titulo: t("projects.contractGenerator"), // Traduzir o título
         data: "ago-2024",
         img: siemens,
-        texto: "Eu desenvolvi um sistema automatizado para geração de contratos no departamento de vendas da Siemens Gamesa, substituindo um processo manual. A solução gera contratos PDF personalizados, adaptando automaticamente informações como endereço, data e tipo de moeda para diferentes clientes. O sistema também inclui validações rigorosas para garantir a precisão dos dados.",
-        habilidades: "React.js",
+        texto: t("projects.contractGeneratorDescription"), // Traduzir a descrição
+        habilidades: t("projects.reactSkills"), // Traduzir as habilidades
         logo: <FaReact color='#61DBFB' size={30} />
     },
     {
         id: 2,
-        titulo: "Em Breve",
+        titulo: t("projects.comingSoon"), // Traduzir o título
         data: "2024",
         img: null,
-        texto: "Mais projetos estão em construção",
-        habilidades: "Em Construção",
+        texto: t("projects.comingSoonDescription"), // Traduzir a descrição
+        habilidades: t("projects.comingSoon"), // Traduzir as habilidades para o campo correto
         logo: <MdOutlineQuestionMark />
     }];
 
@@ -45,7 +47,7 @@ export default function Projetos() {
         <div className='Projetos' ref={ref} id='projetos'>
             <SlideAnimation isInView={isInView} duration={0.75}>
                 <FadeBottomAnimation isInView={isInView} duration={1} >
-                    <Titulo>Projetos</Titulo>
+                    <Titulo>{t("projects.title")}</Titulo> {/* Traduzir o título */}
                 </FadeBottomAnimation>
             </SlideAnimation>
             <FadeLeftAnimation isInView={isInView}>
