@@ -1,6 +1,5 @@
-import React from 'react';
 import MainPage from './Pages/MainPage';
-import './config/i18n.js'; // Importa o arquivo de configuração i18n
+import './config/i18n.js';
 
 function App() {
   return (
