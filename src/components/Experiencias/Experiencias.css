@@ -55,10 +55,9 @@
 }
 
 .experiencias__data {
-    margin-left: 50px;
     font-size: var(--26px);
     color: #939393;
-    margin-bottom: 12px;
+    margin-bottom: 30px;
 }
 
 .experiencias__cargo {

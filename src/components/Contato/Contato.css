@@ -136,6 +136,7 @@
 
     .Contato-botaoemail {
         font-size: 1rem; /* Ajusta o tamanho da fonte do botão de email */
-        width: 60%; /* Ajusta a largura do botão */
+        width: 40%; /* Ajusta a largura do botão */
+        margin-right: 3px;
     }
 }

@@ -155,7 +155,7 @@
 
 @media (max-width: 480px) {
     .Projetos__container {
-        width: 80%; /* Largura 100% para telas menores */
+        width: 70%; /* Largura 100% para telas menores */
         min-height: 400px; /* Altura reduzida */
         min-width: 350px;
     }

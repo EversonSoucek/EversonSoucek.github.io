@@ -6,10 +6,10 @@ import FadeBottomAnimation from '../Animations/FadeBottomAnimation/FadeBottomAni
 import { useRef } from 'react';
 import { useInView } from 'framer-motion';
 import Titulo from '../Titulo/Titulo';
-import { useTranslation } from 'react-i18next'; // Importar o hook de tradução
+import { useTranslation } from 'react-i18next';
 
 export default function Experiencias() {
-  const { t } = useTranslation(); // Acessa a função de tradução
+  const { t } = useTranslation(); 
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.1 });
 
@@ -17,16 +17,16 @@ export default function Experiencias() {
     id: 1,
     empresa: "Visual Software",
     data: "Julho 2023 - Atual",
-    cargo: t("experiences.qaAnalyst"), // Traduzir o cargo
-    descricao: t("experiences.qaDescription"), // Traduzir a descrição
+    cargo: t("experiences.qaAnalyst"), 
+    descricao: t("experiences.qaDescription"), 
     imagem: visual
   },
   {
     id: 2,
     empresa: "Siemens Gamesa",
     data: "Junho 2024",
-    cargo: t("experiences.frontendDeveloper"), // Traduzir o cargo
-    descricao: t("experiences.contractSystem"), // Traduzir a descrição
+    cargo: t("experiences.frontendDeveloper"),
+    descricao: t("experiences.contractSystem"), 
     imagem: siemens
   }
   ];
@@ -36,7 +36,7 @@ export default function Experiencias() {
       <div style={{ textAlign: 'center' }}>
         <SlideAnimation duration={0.75} isInView={isInView}>
           <FadeBottomAnimation isInView={isInView} duration={1}>
-            <Titulo className="experiencias__titulo">{t("experiences.title")}</Titulo> {/* Traduzir o título */}
+            <Titulo className="experiencias__titulo">{t("experiences.title")}</Titulo>
           </FadeBottomAnimation>
         </SlideAnimation>
       </div>
