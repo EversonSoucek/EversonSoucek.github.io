@@ -9,7 +9,7 @@ import { toast, Toaster } from 'sonner';
 
 export default function Contato() {
     const ref = useRef(null);
-    const emailKey = import.meta.env.VITE_EMAIL;
+    const emailKey = process.env.VITE_EMAIL;
     const { t } = useTranslation();
 
     const onSubmit = async (event) => {
@@ -20,7 +20,6 @@ export default function Contato() {
 
         const userEmail = event.target.email.value;
 
-        // Envia para o Web3Forms
         const response = await fetch("https://api.web3forms.com/submit", {
             method: "POST",
             body: formData
@@ -32,26 +31,6 @@ export default function Contato() {
             toast.success(t("contact.emailSuccess"), { style: estiloToasty });
             event.target.reset();
 
-            try {
-                const sendEmailResponse = await fetch("/api/function-1", {
-                    method: "POST",
-                    headers: {
-                        'Authorization': 'Bearer SEU_TOKEN_AQUI',
-                        "Content-Type": "application/json",
-                    },
-                    body: JSON.stringify({
-                        toMail: userEmail,
-                        content: t("contact.emailSuccess")
-                    })
-                });
-
-                if (!sendEmailResponse.ok) {
-                    console.error("Erro ao enviar email automático de confirmação");
-                    toast.error(t("contact.requestError"));
-                }
-            } catch (error) {
-                console.error("Erro na requisição à Google Cloud Function:", error);
-            }
         } else {
             console.error("Error", data);
             toast.error(t("contact.emailError"));

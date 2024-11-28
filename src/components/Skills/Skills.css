@@ -108,6 +108,13 @@ html, body {
     animation-delay: calc(30s / 8 * (8 - 8) * -1);
 }
 
+.container__titulo {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 @media (max-width: 768px) {
     .wrapper {
         height: 300px;

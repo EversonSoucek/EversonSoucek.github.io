@@ -8,11 +8,24 @@ import node from "../../assets/img/nodeLogo.png"
 import mongo from "../../assets/img/mongoLogo.png"
 import mariadb from "../../assets/img/mariadbLogo.png"
 import reactrouterdom from "../../assets/img/ReactRouterDomLogo.png"
+import { useRef } from "react"
+import { useInView } from "framer-motion"
+import SlideAnimation from "../Animations/SlideAnimation/SlideAnimation"
+import FadeBottomAnimation from "../Animations/FadeBottomAnimation/FadeBottomAnimation"
 
 export default function Skills() {
+    const ref = useRef(null);
+    const isInView = useInView(ref, { once: true, amount: 0.1 });
+
     return (
-        <div className='container' id='skills'>
-            <Titulo>Skills</Titulo>
+        <div className='container' id='skills' ref={ref}>
+            <div className="container__titulo">
+                <SlideAnimation isInView={isInView} duration={1}>
+                    <FadeBottomAnimation isInView={isInView} duration={1} >
+                        <Titulo>Skills</Titulo>
+                    </FadeBottomAnimation>
+                </SlideAnimation>
+            </div>
             <div className='skills'>
                 <div className="wrapper">
                     <div className="item item1">
