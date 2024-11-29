@@ -9,7 +9,7 @@ import { toast, Toaster } from 'sonner';
 
 export default function Contato() {
     const ref = useRef(null);
-    const emailKey = process.env.VITE_EMAIL;
+    const emailKey = import.meta.env.VITE_EMAIL;
     const { t } = useTranslation();
 
     const onSubmit = async (event) => {

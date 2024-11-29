@@ -13,6 +13,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "dotenv": "^16.4.5",
     "framer-motion": "^11.9.0",
     "gh-pages": "^6.1.1",
     "i18next": "^23.16.8",
