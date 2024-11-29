@@ -18,7 +18,7 @@ export default function Contato() {
         const formData = new FormData(event.target);
         formData.append("access_key", `${emailKey}`);
 
-        const userEmail = event.target.email.value;
+        //const userEmail = event.target.email.value;
 
         const response = await fetch("https://api.web3forms.com/submit", {
             method: "POST",
